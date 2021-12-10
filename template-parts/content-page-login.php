@@ -23,6 +23,8 @@
 
 	?>
 
+	<?php nws_2020_post_thumbnail(); ?>
+
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -34,6 +36,7 @@
 			)
 		);
 		?>
+		<div style="clear: both;"></div>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

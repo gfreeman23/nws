@@ -1,0 +1,44 @@
+body {
+  background: url("images/login-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.login h1 a {
+  background: url("images/nws-logo-wide.png");
+  background-size: 300px;
+  width: 300px;
+  height: 60px;
+}
+
+input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input[type="checkbox"], input[type="radio"], select, textarea {
+  border-radius: 0px;
+}
+
+.wp-core-ui .button-secondary {
+  color: #005198;
+}
+
+.wp-core-ui .button-primary {
+  background: #a07d30;
+  border: 0;
+  border-radius: 0;
+}
+
+.wp-core-ui .button-primary:hover {
+  background: #a07d30;
+  opacity: .8;
+}
+
+.login #backtoblog a, .login #nav a, .login #backtoblog a:focus, .login #nav a:focus, .login h1 a:focus {
+  color: #ccc;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+  color: #a07d30;
+  opacity: .8;
+}
+
+a {
+  color: #a07d30;
+}

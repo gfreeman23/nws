@@ -56,6 +56,6 @@ function nws_2020_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function nws_2020_customize_preview_js() {
-	wp_enqueue_script( 'nws-2020-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'nws-2020-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'nws_2020_customize_preview_js' );

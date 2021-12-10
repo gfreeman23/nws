@@ -11,19 +11,25 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="footer" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nws-2020' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nws-2020' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nws-2020' ), 'nws-2020', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			<div id="footer-top">
+				<div class="max-width">
+					<div class="footer-top-left">
+			      <p><a href="" target="_blank" rel="nofollow noopener"><img src="/wp-content/themes/nws-2020/images/social-icon-facebook.png" alt="Facebook Page" width="40" height="40"></a><a href="" target="_blank" rel="noopener"><img src="/wp-content/themes/nws-2020/images/social-icon-twitter.png" alt="Twitter Page" width="40" height="40"></a><a href="" target="_blank" rel="noopener"><img src="/wp-content/themes/nws-2020/images/social-icon-linkedin.png" alt="LinkedIn Page" width="40" height="40"></a><a href="" target="_blank" rel="noopener"><img src="/wp-content/themes/nws-2020/images/social-icon-instagram.png" alt="Instagram Page" width="40" height="40"></a></p>
+			    </div>
+			    <div class="footer-top-center">
+						<a href="" target="_blank" rel="nofollow noopener">yourname@email.com</a> | 555.555.5555
+			    </div>
+			    <div class="footer-top-right">
+			      <a href="" target="_blank" rel="nofollow noopener"><img src="/wp-content/themes/nws-2020/images/cureduchenne-logo-white.png" alt="White Logo"></a>
+			    </div>
+				</div>
+			</div>
+			<div id="footer-bottom">
+				<div id="footer-nav-top"><?php wp_nav_menu( array( 'theme_location' => 'footer-nav-top' ) ); ?></div>
+				<div id="footer-nav-bottom"><?php wp_nav_menu( array( 'theme_location' => 'footer-nav-bottom' ) ); ?></div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

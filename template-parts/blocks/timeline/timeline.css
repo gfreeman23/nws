@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+
+.timeline-wrap {
+  padding: 0 20px;
+}
+
+.timeline-wrap.color,
+.container:first-of-type::before,
+.container:last-of-type::before{
+  background-color: #fff;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #2e101f;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: -2px;
+}
+
+.container:first-of-type::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: auto;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  margin-left: -2px;
+  z-index: 1;
+}
+
+.container:last-of-type::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: auto;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  margin-left: -2px;
+  z-index: 1;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 20px 10px 100px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #2e101f;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the right */
+/* Fix the circle for containers on the right side */
+
+.right,
+.right::after {
+  left: 0;
+}
+
+/* The actual content */
+.content {
+  padding: 40px 30px;
+  position: relative;
+}
+
+.content .content-column-wrap {
+  z-index: 1;
+  position: relative;
+  display: table;
+}
+
+.content .content-bg {
+  content: '';
+  position: absolute;
+  width: auto;
+  background: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 160px;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+}
+
+/* The date */
+
+.content .content-date {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 34px;
+  line-height: 34px;
+  height: 34px;
+  display: block;
+}
+
+.content .content-date h2 {
+  font-weight: 400;
+  font-family: Oleo Script Swash Caps;
+  font-size: 34px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  color: #000;
+}
+
+/* The image */
+
+.content .content-image {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.content .content-image img {
+  max-width: 250px;
+}
+
+/* The description */
+
+.content .content-description {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+.content .content-description h3 {
+  font-size: 26px;
+  font-weight: 400;
+  font-family: Oleo Script Swash Caps;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  color: #a07d30;
+}
+
+.content .content-description p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .content .content-bg {
+    left: 0;
+  }
+
+  .container {
+    padding-left: 80px;
+  }
+
+  .container .content {
+    padding: 20px;
+  }
+
+  .content .content-date {
+    left: -37px;
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+  }
+
+  .content .content-date h2 {
+    font-size: 24px;
+  }
+
+  .content .content-column-wrap,
+  .content .content-image,
+  .content .content-description {
+    display: inline-block;
+  }
+
+  .content .content-image img {
+    width: 100%;
+  }
+
+  .content .content-description {
+    padding-left: 0;
+  }
+
+}
